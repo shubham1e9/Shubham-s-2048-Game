@@ -1,55 +1,103 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Arial;
-}
-
 body {
-  background-color: #333;
+  font-family: monospace;
+  text-align: center;
+  background-color: #313131;
+}
+h2{
+  color: white;
+}
+hr {
+  width: 500px;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+
+  background-color: rgb(184, 184, 184);
+  border: 6px solid rgb(217, 217, 217);
+  border-radius: 12px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-size: 7.5vmin;
-}
-
-#game-board {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
-  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
-  background-color: #CCC;
-  gap: var(--cell-gap);
-  border-radius: 1vmin;
-  padding: var(--cell-gap);
-  position: relative;
-}
-
-.cell {
-  background-color: #AAA;
-  border-radius: 1vmin;
+  flex-wrap: wrap;
 }
 
 .tile {
-  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 5px solid #ccc;
+  /* border-radius: 5px; */
+  font-size: 40px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--cell-size);
-  height: var(--cell-size);
-  background-color: red;
-  border-radius: 1vmin;
-  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
-  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
-  font-weight: bold;
-  background-color: hsl(200, 50%, var(--background-lightness));
-  color: hsl(200, 25%, var(--text-lightness));
-  animation: show 200ms ease-in-out;
-  transition: 100ms ease-in-out;
 }
 
-@keyframes show {
-  0% {
-    opacity: .5;
-    transform: scale(0);
-  }
+
+/* colored tiles */
+
+.x2 {
+  background-color: #ddecf4;
+  color: #313131;
+}
+
+.x4 {
+  background-color: #bad9e8;
+  color: #313131;
+}
+
+.x8 {
+  background-color: #98c6dd;
+  color: #313131;
+}
+
+.x16{
+  background-color: #75b3d1;
+  color: #313131;
+}
+
+.x32{
+  background-color: #539fc6;
+  color: #313131;
+}
+
+.x64{
+  background-color: #3b89b0;
+  color: white;
+}
+
+.x128{
+  background-color: #2f6e8e;
+  color: white;
+}
+
+.x256{
+  background-color: #edcc63;
+  color: white;
+}
+
+.x512{
+  background-color: #edc651;
+  color: white;
+}
+
+.x1024{
+  background-color: #eec744;
+  color: white;
+}
+
+.x2048{
+  background-color: #ecc230;
+  color: white;
+}
+
+.x4096 {
+  background-color: #fe3d3d;
+  color: white;
+}
+
+.x8192 {
+  background-color: #ff2020;
+  color: white;
 }
