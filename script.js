@@ -8,7 +8,10 @@ window.onload = function() {
 }
 
 function setGame() {
-    board = [[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0]]
+    board = [[0, 0, 0, 0],
+             [0, 0, 0, 0],
+             [0, 0, 0, 0],
+             [0, 0, 0, 0]]
 
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
